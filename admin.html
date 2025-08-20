@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger House Admin Dashboard</title>
+    <link
+      rel="shortcut icon"
+      href="images/download-removebg-preview (1).png"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <div class="sidebar p-3 text-white">
+        <h3 class="text-center mb-4">Burger Admin</h3>
+        <a href="#"> Dashboard</a>
+        <a href="#"> Orders</a>
+        <a href="#"> Menu</a>
+        <a href="#"> Users</a>
+        <a href="#"> Reviews</a>
+        <a href="#"> Analytics</a>
+        <hr class="border-light" />
+        <a href="#" class="text-danger"> Logout</a>
+      </div>
+
+      <!-- Main content -->
+      <div class="flex-grow-1">
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-white shadow-sm px-4">
+          <span class="navbar-brand mb-0 h1 fw-bold">Dashboard</span>
+          <div class="d-flex align-items-center">
+            <input
+              type="text"
+              class="form-control form-control-sm me-3"
+              placeholder="Search..."
+            />
+            <img
+              src="images/download-removebg-preview (1).png"
+              alt="profile"
+              class="profile-pic"
+            />
+          </div>
+        </nav>
+
+        <!-- Content -->
+        <div class="container-fluid p-4">
+          <!-- Stat Cards -->
+          <div class="row g-4 mb-4">
+            <div class="col-md-3">
+              <div class="card card-custom text-white bg-primary">
+                <div class="card-body">
+                  <h5 class="card-title">Total Orders</h5>
+                  <p class="display-6 fw-bold">150</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-custom text-white bg-success">
+                <div class="card-body">
+                  <h5 class="card-title">Total Users</h5>
+                  <p class="display-6 fw-bold">80</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-custom text-white bg-warning">
+                <div class="card-body">
+                  <h5 class="card-title">Menu Items</h5>
+                  <p class="display-6 fw-bold">25</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-custom text-white bg-danger">
+                <div class="card-body">
+                  <h5 class="card-title">Reviews</h5>
+                  <p class="display-6 fw-bold">40</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container my-5">
+            <div class="card card-custom">
+              <div class="card-body">
+                <h5 class="card-title mb-4">Sales Statistics</h5>
+                <div class="chart-container">
+                  <!-- Fake Chart (Static SVG Line) -->
+                  <div class="chart-line">
+                    <svg>
+                      <path
+                        d="M0 120 L60 160 L120 140 L180 100 L240 130 L300 70"
+                      />
+                      <circle cx="0" cy="120" r="5"></circle>
+                      <circle cx="60" cy="160" r="5"></circle>
+                      <circle cx="120" cy="140" r="5"></circle>
+                      <circle cx="180" cy="100" r="5"></circle>
+                      <circle cx="240" cy="130" r="5"></circle>
+                      <circle cx="300" cy="70" r="5"></circle>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between mt-3 text-muted small"
+                >
+                  <span>Jan</span>
+                  <span>Feb</span>
+                  <span>Mar</span>
+                  <span>Apr</span>
+                  <span>May</span>
+                  <span>Jun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Orders Table -->
+          <div class="card card-custom">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Recent Orders</h5>
+              <div class="table-responsive">
+                <table class="table align-middle">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Customer</th>
+                      <th>Order</th>
+                      <th>Status</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>John Doe</td>
+                      <td>Cheese Burger</td>
+                      <td><span class="badge bg-success">Completed</span></td>
+                      <td>2025-08-17</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Jane Smith</td>
+                      <td>Veggie Burger</td>
+                      <td><span class="badge bg-warning">Pending</span></td>
+                      <td>2025-08-16</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Mike Johnson</td>
+                      <td>Spicy Chicken Burger</td>
+                      <td><span class="badge bg-danger">Cancelled</span></td>
+                      <td>2025-08-15</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

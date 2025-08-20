@@ -25,15 +25,167 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #fff8f0;
+      }
+
+      nav {
+        background: #ff6a2b;
+        padding: 1rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #333;
+        letter-spacing: 3px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav ul li {
+        font-weight: 600;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        padding: 0.3rem 0.5rem;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background: whitesmoke;
+        transition: width 0.3s ease;
+      }
+
+      nav ul li a:hover,
+      nav ul li a:focus {
+        color: whitesmoke;
+      }
+
+      nav ul li a:hover::after,
+      nav ul li a:focus::after {
+        width: 100%;
+      }
+
+      @keyframes shine {
+        0% {
+          background-position: 200% center;
+        }
+        100% {
+          background-position: -200% center;
+        }
+      }
+      /* Responsive */
+      @media (max-width: 768px) {
+        .menu-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav a {
+          display: block;
+          margin: 10px 0;
+        }
+      }
+      .hero {
+        width: 100%;
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        padding: 10px 10%;
+        overflow: hidden;
+      }
+
+      .login-btn {
+        text-decoration: none;
+        color: #333;
+        margin-right: 15px;
+        font-weight: 400;
+      }
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 14px 40px;
+        color: black;
+        background-color: #ff6a2b;
+        font-size: 14px;
+        border-radius: 30px;
+        border-top-right-radius: 0;
+        transition: 0.5s;
+      }
+      .content {
+        margin-top: 10%;
+        max-width: 600px;
+      }
+      .content h1 {
+        font-size: 50px;
+        color: black;
+      }
+      .content p {
+        margin: 10px 0 30px;
+        color: black;
+        animation-delay: 0.5s;
+      }
+      .content .btn {
+        padding: 15px 80px;
+        font-size: 16px;
+        animation-delay: 1s;
+      }
+      .btn:hover {
+        border-top-right-radius: 30px;
+      }
+      .feature-img {
+        width: 40%;
+        position: absolute;
+        bottom: 15%;
+        right: 10%;
+      }
+      .feature-img .anim {
+        animation-delay: 1.5s;
+      }
+      .anim {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: moveup 0.5s linear forwards;
+      }
+      @keyframes moveup {
+        100% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    </style>
   </head>
   <body>
     <header id="header">
       <nav>
         <div class="logo">Burger House</div>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -53,315 +205,12 @@
           Fresh Ingedients, Bold Flavors<br />
           Carfted Just For You
         </p>
-        <a href="#menu" class="btn anim">More Menu</a>
+        <a href="menu.html" class="btn anim">More Menu</a>
       </div>
       <img
         src="images/pngtree-burger-french-fries-and-chicken-removebg-preview.png"
         class="feature-img anim"
       />
     </section>
-
-    <hr class="section-divider" />
-
-    <!--menu section-->
-    <section id="menu">
-      <div class="menu-section">
-        <h2>Our Delicious Menu</h2>
-        <p>Fresh, handcrafted burgers made just for you</p>
-        <div class="menu-container">
-          <div class="menu-card">
-            <img
-              src="images/Classic Cheeseburger with Melted Cheese Drip😋.jpg"
-              alt="Classic Burger"
-            />
-            <h3>Classic Burger</h3>
-            <p>Juicy beef patty with fresh lettuce, tomato & cheese</p>
-            <div class="price">$8.99</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img
-              src="images/Mushroom Veggie Burger Patties.jpg"
-              alt="Veggie Burger"
-            />
-            <h3>Veggie Burger</h3>
-            <p>Healthy grilled veggie patty with fresh greens</p>
-            <div class="price">$7.49</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img
-              src="images/Gourmet Burger Bliss with Cheese Extravaganza 😍🍔.jpg"
-              alt="Cheese Burger"
-            />
-            <h3>Cheese Burger</h3>
-            <p>Loaded with double cheddar cheese and beef patty</p>
-            <div class="price">$9.49</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img src="images/2022-03-16_ATK-0561.webp" alt="Bacon Burger" />
-            <h3>Bacon Burger</h3>
-            <p>Crispy bacon strips with juicy beef & BBQ sauce</p>
-            <div class="price">$10.49</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img
-              src="images/spicy chicken burger.jpg"
-              alt="Spicy chicken Burger"
-            />
-            <h3>Spicy Chicken Burger</h3>
-            <p>Juicy chicken, fresh veggies, and a hot & smoky kick!</p>
-            <div class="price">$6.49</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img
-              src="images/mushroom swiss burger.jpg"
-              alt="Mushroom Swiss Burger"
-            />
-            <h3>Mushroom Swiss Burger</h3>
-            <p>
-              Tender beef, sautéed mushrooms, and melted Swiss cheese in every
-              bite
-            </p>
-            <div class="price">$10.49</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img src="images/fish fillet burger.jpg" alt="Fish Fillet Burger" />
-            <h3>Fish Fillet Burger</h3>
-            <p>
-              Crispy golden fish, fresh lettuce, and tangy tartar sauce in a
-              soft bun!
-            </p>
-            <div class="price">$5</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img src="images/spicy chicken.jpg" alt="Spicy Chicken" />
-            <h3>Spicy Chicken</h3>
-            <p>
-              Crispy chicken with bold, fiery flavors for a perfect spicy bite!
-            </p>
-            <div class="price">$6</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img src="images/cheese fries.jpg" alt="Cheese fries" />
-            <h3>Cheese Fries</h3>
-            <p>
-              Cheese Fries – Golden crispy fries loaded with rich, melted
-              cheese!
-            </p>
-            <div class="price">$3</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img src="images/french fries.jpg" alt="French Fries" />
-            <h3>French Fries</h3>
-            <p>
-              French Fries – Crispy, golden, and perfectly salted classic fries!
-            </p>
-            <div class="price">$2</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img
-              src="images/crispy fried onion rings.jpg"
-              alt="Crispy Fried onion Rings"
-            />
-            <h3>Crispy Fried onion Rings</h3>
-            <p>
-              Crispy Fried Onion Rings – Golden-battered onion rings with a
-              crunchy bite!
-            </p>
-            <div class="price">$7</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img src="images/mozzarella sticks.jpg" alt="Mozzarella Sticks" />
-            <h3>Mozzarella Sticks</h3>
-            <p>
-              Mozzarella Sticks – Gooey melted cheese sticks with a crispy
-              golden crust!
-            </p>
-            <div class="price">$8</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img src="images/coca cola.jpg" alt="Coca Cola" />
-            <h3>Coca Cola</h3>
-            <p>
-              Classic refreshing soda to quench your thirst and complement any
-              meal!
-            </p>
-            <div class="price">$2</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img src="images/lemonade.jpg" alt="Lemonade" />
-            <h3>Lemonade</h3>
-            <p>
-              Cool, tangy, and refreshing citrus drink to brighten your day!
-            </p>
-            <div class="price">$2</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img src="images/iced coffee.jpg" alt="Ice coffee" />
-            <h3>Ice Coffee</h3>
-            <p>
-              Chilled, smooth coffee with a perfect balance of bold and sweet
-              flavors!
-            </p>
-            <div class="price">$2</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-
-          <div class="menu-card">
-            <img
-              src="images/chocolate milkshake.jpg"
-              alt="Chocolate Milkshake"
-            />
-            <h3>Chocolate Milkshake</h3>
-            <p>Creamy, rich chocolate blended into a frosty, dreamy treat!</p>
-            <div class="price">$2</div>
-            <button class="order-btn">Order Now</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--review section-->
-    <section id="reviews">
-      <h2>What Our Customers Say</h2>
-      <div class="review-container">
-        <div class="review-box">
-          <p>"The burgers here are juicy and flavorful. Best in town!"</p>
-          <h4>— Aung Kyaw</h4>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-
-        <div class="review-box">
-          <p>"Great service and fast delivery. Love their cheese burgers!"</p>
-          <h4>— May Thu</h4>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-          </div>
-        </div>
-
-        <div class="review-box">
-          <p>"Love the crispy fries and friendly staff. Highly recommended!"</p>
-          <h4>— Hnin Ei Ei</h4>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--about us section-->
-    <section id="about" class="about-section">
-      <div class="container">
-        <h2>About Us</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>
-              Welcome to Burger House — where every bite is a celebration of
-              flavor and quality! We’ve been serving up delicious, handcrafted
-              burgers made from the freshest ingredients since 2010. Our passion
-              is creating mouth-watering meals that bring friends and family
-              together.
-            </p>
-            <ul>
-              <li>Fresh, locally sourced ingredients</li>
-              <li>Experienced chefs crafting every burger</li>
-              <li>Cozy atmosphere and excellent service</li>
-            </ul>
-          </div>
-          <div class="about-image">
-            <img src="images/images1-removebg-preview.png" alt="Our Chef" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--contact section-->
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <div class="contact-container">
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-
-        <div class="contact-info">
-          <p>
-            <strong>Address:</strong><br />123 Burger Street,<br />Food City, FC
-            45678
-          </p>
-          <p>
-            <strong>Phone:</strong><br /><a href="tel:+1234567890"
-              >+1 234 567 890</a
-            >
-          </p>
-          <p>
-            <strong>Email:</strong><br /><a href="mailto:info@burgerhouse.com"
-              >info@burgerhouse.com</a
-            >
-          </p>
-          <p>
-            <strong>Opening Hours:</strong><br />Mon - Sun: 10:00 AM - 10:00 PM
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!--footer section-->
-    <footer>
-      <div class="footer-container">
-        <p>&copy; 2025 Burgerhouse. All rights reserved.</p>
-        <a href="#home"> <i class="fa-regular fa-circle-up fa-2x"></i></a>
-      </div>
-    </footer>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
-      integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
   </body>
 </html>

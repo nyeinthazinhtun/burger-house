@@ -1,0 +1,64 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f6fa;
+}
+.sidebar {
+  min-height: 100vh;
+  background: #212529;
+}
+.sidebar a {
+  color: #fff;
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.sidebar a:hover {
+  background: #343a40;
+}
+.card-custom {
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.table th {
+  background: #f1f3f5;
+}
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dee2e6;
+}
+
+.card-custom {
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+/* Fake Chart */
+.chart-container {
+  position: relative;
+  height: 250px;
+  background: linear-gradient(to right, #f8f9fa 1px, transparent 1px),
+    linear-gradient(to bottom, #f8f9fa 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+.chart-line {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: calc(100% - 80px);
+  height: 180px;
+}
+.chart-line svg {
+  width: 100%;
+  height: 100%;
+}
+.chart-line circle {
+  fill: #ff5722;
+}
+.chart-line path {
+  stroke: #ff5722;
+  stroke-width: 2;
+  fill: none;
+}
